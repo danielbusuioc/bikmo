@@ -1,0 +1,222 @@
+.bikmojobsblock {
+  margin: 0;
+  padding-top: 67px;
+  padding-bottom: 43px;
+  background-color: $bikmo-dark;
+  background-image: url(../../images/lanscape-pattern10__mobile.svg);
+}
+
+.bikmojobsblock-header {
+  margin-bottom: 45px;
+
+  .bikmojobsblock-header__title {
+    color: $white;
+    line-height: 58px;
+  }
+}
+
+.bikmojobsblock-item {
+  min-width: 100%;
+  max-width: 100%;
+  background-color: $white;
+  padding: 24px 20px 24px 24px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+
+  .bikmojobsblock-item__expandeble {
+    display: none;
+
+    .bikmojobsblock-item__cta {
+      display: block;
+    }
+  }
+
+  &.bikmojobsblock-item--open {
+    .bikmojobsblock-item__title {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &.bikmojobsblock-item--placeholder {
+    display: none;
+    margin: 0;
+  }
+
+  .bikmojobsblock-item__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 42px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: $bikmo-dark;
+    position: relative;
+    cursor: pointer;
+    padding-right: 22px;
+
+    svg {
+      display: block;
+      position: absolute;
+      top: 6px;
+      right: 0;
+      transition: transform 0.3s ease-out;
+    }
+  }
+
+  .bikmojobsblock-item__location {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $bikmo-dark;
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+
+  .bikmojobsblock-item__text {
+    font-size: 18px;
+    line-height: 22px;
+    padding-top: 16px;
+    padding-bottom: 24px;
+    color: $bikmo-grey;
+  }
+
+  .bikmojobsblock-item__cta {
+    display: none;
+
+    .btn {
+      padding: 16px 28px;
+      font-size: 14px;
+      line-height: 100%;
+      font-weight: bold;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-medium) {
+  .bikmojobsblock {
+    padding-top: 101px;
+    padding-bottom: 110px;
+    background-image: url(../../images/lanscape-pattern10__tablet.svg);
+  }
+
+  .bikmojobsblock-header {
+    margin-bottom: 56px;
+
+    .bikmojobsblock-header__title {
+      line-height: 86px;
+    }
+  }
+
+  .bikmojobsblock-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .bikmojobsblock-item {
+    min-width: calc(50% - #{vwmd(12px)});
+    max-width: calc(50% - #{vwmd(12px)});
+    padding: 56px 32px 31px 32px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+
+    .bikmojobsblock-item__expandeble {
+      display: flex !important;
+      flex-direction: column;
+
+      .bikmojobsblock-item__cta {
+        display: none;
+        pointer-events: none;
+      }
+    }
+
+    .bikmojobsblock-item__title {
+      margin-bottom: 24px;
+      font-size: 48px;
+      line-height: 73.5%;
+      padding-right: 0;
+
+      svg {
+        display: none;
+      }
+    }
+
+    .bikmojobsblock-item__location {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    .bikmojobsblock-item__text {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    .bikmojobsblock-item__cta {
+      display: block;
+      margin-bottom: 0;
+      margin-top: auto;
+    }
+  }
+}
+
+
+@media only screen and (min-width: $breakpoint-large) {
+  .bikmojobsblock {
+    padding-top: 101px;
+    padding-bottom: 120px;
+    background-image: url(../../images/lanscape-pattern10__desktop.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .bikmojobsblock-header {
+    margin-bottom: 72px;
+  }
+
+  .bikmojobsblock-item {
+    min-width: vwlg(360px);
+    max-width: vwlg(360px);
+
+    &.bikmojobsblock-item--placeholder {
+      display: block;
+      background: transparent;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-extra) {
+  .bikmojobsblock {
+    padding-bottom: 157px;
+  }
+
+  .bikmojobsblock-header {
+    margin-bottom: 56px;
+
+    .bikmojobsblock-header__title {
+      line-height: 115px;
+    }
+  }
+
+  .bikmojobsblock-item {
+    min-width: 480px;
+    max-width: 480px;
+    margin-bottom: 40px;
+    padding: 64px 40px 40px;
+
+    .bikmojobsblock-item__title {
+      font-size: 64px;
+      line-height: 74%;
+    }
+
+    .bikmojobsblock-item__text {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}

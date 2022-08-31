@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Tungsten Condensed";
+  src:
+    url(../../fonts/TungstenCond-Bold.otf) format("embedded-opentype"),
+    url(../../fonts/TungstenCond-Bold.otf);
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN";
+  src:
+    url(../../fonts/DINRg.ttf) format("truetype"),
+    url(../../fonts/DINRg.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN";
+  src:
+    url(../../fonts/DINMd.ttf) format("truetype"),
+    url(../../fonts/DINMd.ttf);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN";
+  src:
+    url(../../fonts/DINBd.ttf) format("truetype"),
+    url(../../fonts/DINBd.ttf);
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

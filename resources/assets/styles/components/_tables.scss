@@ -1,0 +1,64 @@
+.bikmo_table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgba($bikmo-grey, 0.2);
+  margin-bottom: 32px;
+
+  th,
+  td {
+    border-top: 1px solid rgba($bikmo-grey, 0.2);
+    padding: 16px 32px;
+    box-sizing: border-box;
+    text-align: left;
+
+    a {
+      font: inherit;
+      color: $magenta;
+      text-decoration: none;
+    }
+  }
+
+  th {
+    background-color: $bikmo-off-white;
+    color: $bikmo-dark;
+    opacity: 0.5;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  td {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    color: $bikmo-dark;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-medium) {
+  .bikmo_table {
+    margin-bottom: 48px;
+
+    thead {
+      tr {
+        th:first-child {
+          min-width: 230px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-large) {
+  .bikmo_table {
+    margin-bottom: 64px;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-extra) {
+  .bikmo_table {
+    margin-bottom: 64px;
+  }
+}

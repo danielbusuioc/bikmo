@@ -1,0 +1,55 @@
+.btn {
+  display: inline-block;
+  padding: 23px 35px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  outline: 0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  color: $bikmo-dark;
+
+  &.btn--sm {
+    padding: 14px;
+  }
+
+  &.btn--md {
+    padding: 16px;
+  }
+
+  &.btn--magenta-full {
+    color: $white;
+    background: $magenta;
+    border: 2px solid $magenta;
+  }
+
+  &.btn--magenta-border {
+    color: $magenta;
+    border: 2px solid $magenta;
+  }
+
+  &.btn--white-border {
+    color: $white;
+    border: 2px solid $white;
+  }
+
+  &.btn--white-full {
+    color: $bikmo-dark;
+    background: $white;
+    border: 2px solid $white;
+  }
+
+  &.btn--dark-border {
+    color: $bikmo-dark;
+    border: 2px solid $bikmo-dark;
+  }
+
+  &.btn--dark-full {
+    color: $white;
+    background: $bikmo-dark;
+    border: 2px solid $bikmo-dark;
+  }
+}

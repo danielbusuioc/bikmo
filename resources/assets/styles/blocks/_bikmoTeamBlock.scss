@@ -1,0 +1,225 @@
+.bikmoteamblock {
+  margin-top: 65px;
+  margin-bottom: 41px;
+}
+
+.bikmoteamblock-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bikmoteamcard {
+  min-width: calc(50% - #{vwsm(8px)});
+  max-width: calc(50% - #{vwsm(8px)});
+  margin-bottom: 48px;
+
+  .bikmoteamcard__image {
+    height: 192px;
+    position: relative;
+    margin-bottom: 4px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .bikmoteamcard__tags {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .block_tag {
+        margin: 0;
+        font-size: 16px;
+        margin-left: 10px;
+
+        &:first-child {
+          margin-left: 12px;
+          font-weight: normal;
+          margin-bottom: -2px;
+        }
+      }
+    }
+  }
+
+  .bikmoteamcard__content {
+    padding: 24px 0 0;
+
+    .bikmoteamcard__job {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $bikmo-dark;
+      margin-bottom: 12px;
+    }
+
+    .bikmoteamcard__description {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: $bikmo-grey;
+      margin-bottom: 15px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .bikmoteamcard__link {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      color: $bikmo-dark;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        color: $bikmo-dark;
+      }
+
+      .green_underline {
+        &:after {
+          height: 4px;
+          bottom: 0;
+        }
+      }
+
+      svg {
+        margin-left: 8px;
+        height: 14px;
+      }
+    }
+  }
+
+  &.bikmoteamcard--placeholder {
+    display: none;
+    margin-bottom: 0;
+  }
+}
+
+
+@media only screen and (min-width: $breakpoint-medium) {
+  .bikmoteamblock {
+    margin-top: 84px;
+    margin-bottom: 84px;
+  }
+
+  .bikmoteamcard {
+    min-width: calc(50% - #{vwmd(12px)});
+    max-width: calc(50% - #{vwmd(12px)});
+
+    .bikmoteamcard__image {
+      height: 332px;
+      margin-bottom: 14px;
+
+      .bikmoteamcard__tags {
+        bottom: -18px;
+
+        .block_tag {
+          font-size: 23.1946px;
+          line-height: 26px;
+          margin-left: 25px;
+
+          &:first-child {
+            margin-left: 27px;
+          }
+        }
+      }
+    }
+
+    .bikmoteamcard__content {
+      padding: 24px;
+
+      .bikmoteamcard__job {
+        font-size: 18px;
+        line-height: 23px;
+        margin-bottom: 16px;
+      }
+
+      .bikmoteamcard__description {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 18px;
+      }
+
+      .bikmoteamcard__link {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-large) {
+  .bikmoteamcard {
+    min-width: vwlg(264px);
+    max-width: vwlg(264px);
+
+    .bikmoteamcard__content {
+      .bikmoteamcard__link {
+        .green_underline {
+          &:after {
+            bottom: 2px;
+          }
+        }
+      }
+    }
+
+    &.bikmoteamcard--placeholder {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-extra) {
+  .bikmoteamcard {
+    min-width: 350px;
+    max-width: 350px;
+
+    .bikmoteamcard__image {
+      height: 440px;
+      margin-bottom: 18px;
+
+      .bikmoteamcard__tags {
+        bottom: -18px;
+
+        .block_tag {
+          font-size: 32px;
+          line-height: 36px;
+        }
+      }
+    }
+
+    .bikmoteamcard__content {
+      .bikmoteamcard__job {
+        margin-bottom: 19px;
+      }
+
+      .bikmoteamcard__description {
+        font-size: 21px;
+        line-height: 120%;
+        margin-bottom: 24px;
+      }
+
+      .bikmoteamcard__link {
+        font-size: 21px;
+        line-height: 120%;
+
+        .green_underline {
+          &:after {
+            bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+}

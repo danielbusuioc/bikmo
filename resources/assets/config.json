@@ -1,0 +1,33 @@
+{
+  "entry": {
+    "main": [
+      "./scripts/main.js",
+      "./styles/main.scss"
+    ],
+    "customizer": [
+      "./scripts/customizer.js"
+    ],
+    "blog": [
+      "./scripts/blog.js"
+    ],
+    "contact": [
+      "./scripts/contact.js"
+    ],
+    "localization": [
+      "./scripts/localization.js"
+    ],
+    "gutenberg": [
+      "./styles/gutenberg.scss",
+      "./scripts/gutenberg.js"
+    ]
+  },
+  "publicPath": "/app/themes/bikmo",
+  "devUrl": "http://bikmo.test",
+  "proxyUrl": "http://localhost:3005",
+  "cacheBusting": "[name]_[hash:8]",
+  "watch": [
+    "app/**/*.php",
+    "config/**/*.php",
+    "resources/views/**/*.php"
+  ]
+}

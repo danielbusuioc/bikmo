@@ -1,0 +1,15 @@
+@function vw($px, $base) {
+  @return #{$px * 100 / $base}vw;
+}
+
+@function vwsm($px) {
+  @return vw($px, 375px);
+}
+
+@function vwmd($px) {
+  @return vw($px, 768px);
+}
+
+@function vwlg($px) {
+  @return vw($px, 1440px);
+}

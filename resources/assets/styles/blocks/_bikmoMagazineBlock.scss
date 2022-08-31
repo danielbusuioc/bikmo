@@ -1,0 +1,262 @@
+.bikmomagazineblock {
+  margin-bottom: 68px;
+  margin-top: 55px;
+
+  .bikmomagazineblock__title {
+    margin: 0 0 32px;
+    text-align: center;
+  }
+
+  .featured-article {
+    .featured-article__title {
+      font-size: 48px;
+      line-height: 83%;
+    }
+  }
+}
+
+.bikmomagazineblock-list {
+  &.articles-list.blog-list {
+    .article-item {
+      min-width: 100%;
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      .article-item__image {
+        min-width: vwsm(120px);
+        max-width: vwsm(120px);
+        height: 80px;
+        margin-right: 16px;
+      }
+
+      .article-item__title {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      .article-item__date {
+        display: block;
+
+        &.article-item__date--mobile {
+          display: block;
+          margin: 0 0 0 8px;
+        }
+
+        &.article-item__date--desktop {
+          display: none;
+        }
+      }
+
+      .article-item__badges {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .article-badge {
+        font-size: 11px;
+        line-height: 11px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-medium) {
+  .bikmomagazineblock {
+    margin-bottom: 60px;
+    margin-top: 100px;
+
+    .bikmomagazineblock__title {
+      text-align: left;
+    }
+
+    .featured-article {
+      .featured-article__title {
+        font-size: 64px;
+        line-height: 83%;
+      }
+    }
+
+
+    .article-description {
+      font-size: 21px;
+    }
+  }
+
+  .bikmomagazineblock-list {
+    &.articles-list.blog-list {
+
+      .articles-list__container {
+        justify-content: space-between;
+      }
+
+      .article-item {
+        min-width: 30%;
+        max-width: 30%;
+        flex-direction: column;
+        margin-bottom: 0;
+
+        .article-item__image {
+          min-width: 100%;
+          max-width: 100%;
+          margin-right: 0;
+          margin-bottom: -12px;
+          height: 140px;
+        }
+
+        .article-item__content {
+          position: relative;
+          z-index: 2;
+        }
+
+        .article-item__badges {
+          margin-left: 8px;
+        }
+
+        .article-item__date {
+          &.article-item__date--mobile {
+            display: none;
+          }
+
+          &.article-item__date--desktop {
+            display: block;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-large) {
+  .bikmomagazineblock {
+    .bikmomagazineblock__title {
+      margin-bottom: 16px;
+    }
+
+    .featured-article {
+      .featured-article__content {
+        min-width: calc(33.333% - 12px);
+        max-width: calc(33.333% - 12px);
+        margin-left: 24px;
+      }
+
+      .featured-article__image {
+        min-width: calc(66.666% - 12px);
+        max-width: calc(66.666% - 12px);
+      }
+    }
+  }
+
+  .bikmomagazineblock-list {
+    &.articles-list.blog-list {
+      .article-item {
+        min-width: calc(33.333% - 12px);
+        max-width: calc(33.333% - 12px);
+        margin-right: 24px;
+        margin-bottom: 36px;
+
+        .article-item__image {
+          height: 230px;
+        }
+
+        .article-item__title {
+          font-size: 21px;
+          line-height: 120%;
+        }
+
+        .article-badge {
+          font-size: 13px;
+        }
+
+        &:nth-child(2n) {
+          min-width: calc(33.333% - 12px);
+          max-width: calc(33.333% - 12px);
+          margin-right: 24px;
+          margin-bottom: 36px;
+        }
+
+        &:nth-child(3n+2) {
+          margin-right: 24px;
+          min-width: calc(33.333% - 24px);
+          max-width: calc(33.333% - 24px);
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-extra) {
+  .bikmomagazineblock {
+    .bikmomagazineblock__title {
+      margin-bottom: 3px;
+    }
+
+    .article-description {
+      font-size: 24px;
+    }
+
+    .featured-article {
+      .featured-article__title {
+        font-size: 72px;
+        line-height: 83%;
+      }
+
+      .featured-article__content {
+        min-width: calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+        margin-left: 40px;
+      }
+
+      .featured-article__image {
+        min-width: calc(66.666% - 20px);
+        max-width: calc(66.666% - 20px);
+      }
+    }
+  }
+
+  .bikmomagazineblock-list {
+    &.articles-list.blog-list {
+      .article-item {
+        min-width: calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+        margin-right: 40px;
+        margin-bottom: 36px;
+
+        .article-item__image {
+          height: 300px;
+        }
+
+        .article-item__title {
+          font-size: 24px;
+          line-height: 120%;
+        }
+
+        &:nth-child(2n) {
+          min-width: calc(33.333% - 20px);
+          max-width: calc(33.333% - 20px);
+          margin-right: 40px;
+          margin-bottom: 36px;
+        }
+
+        &:nth-child(3n+2) {
+          margin-right: 40px;
+          min-width: calc(33.333% - 40px);
+          max-width: calc(33.333% - 40px);
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+    "key": "group_6037a08acd9c0",
+    "title": "Bikmo Table Display Block",
+    "fields": [
+        {
+            "key": "field_6037a09e551a1",
+            "label": "Title",
+            "name": "bikmo_table_display__block_title",
+            "type": "text",
+            "instructions": "Leave it blank to display the default Table Title from Options page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/bikmotableblock"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1614258389
+}

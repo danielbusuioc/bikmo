@@ -1,0 +1,88 @@
+{
+    "key": "group_6061ce0b4eac4",
+    "title": "Modals Section",
+    "fields": [
+        {
+            "key": "field_6061ce26ee51b",
+            "label": "All Page Modals",
+            "name": "all_page_modals",
+            "type": "repeater",
+            "instructions": "These modals will be available in all the current page blocks. You will still have to configure which button opens which modal individually.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_6061ceb1ee51c",
+                    "label": "Video Type",
+                    "name": "video_type",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "yt": "YouTube",
+                        "vim": "Vimeo"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "vim",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_6061cf99ee51d",
+                    "label": "Video ID",
+                    "name": "video_id",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1617022895
+}

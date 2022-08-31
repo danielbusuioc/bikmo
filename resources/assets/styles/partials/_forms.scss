@@ -1,0 +1,110 @@
+.form-row {
+  position: relative;
+
+  span {
+    display: block;
+  }
+
+  input {
+    &::-webkit-input-placeholder {
+      color: $bikmo-dark;
+      opacity: 0.6;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    &:-moz-placeholder {
+      color: $bikmo-dark;
+      opacity: 0.6;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    &:-ms-input-placeholder {
+      color: $bikmo-dark;
+      opacity: 0.6;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+
+  input[type=email] {
+    display: block;
+    border: 2px solid $bikmo-dark;
+    outline: 0;
+    padding: 13px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  input[type=submit] {
+    background: $bikmo-dark;
+    height: 48px;
+    border: none;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bold;
+    outline: 0;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .ajax-loader {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+  }
+
+  .wpcf7-not-valid-tip {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+  }
+}
+
+.form-oneliner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .form-row:first-of-type {
+    min-width: calc(100% - 55px);
+    max-width: calc(100% - 55px);
+
+    input[type=email] {
+      border-right-width: 0;
+    }
+  }
+
+  .form-row:last-of-type {
+    min-width: 55px;
+    max-width: 55px;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-medium) {
+  .form-row {
+    input[type=email] {
+      padding: 24px;
+    }
+
+    input[type=submit] {
+      height: 70px;
+    }
+  }
+
+  .form-oneliner {
+    .form-row:first-of-type {
+      min-width: calc(100% - 155px);
+      max-width: calc(100% - 155px);
+    }
+
+    .form-row:last-of-type {
+      min-width: 155px;
+      max-width: 155px;
+    }
+  }
+}

@@ -1,0 +1,407 @@
+@import "common/variables";
+@import "common/functions";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+
+/** Import theme styles */
+@import "components/buttons";
+@import "components/tables";
+@import "blocks/general";
+@import "blocks/bikmoContentBlock";
+@import "blocks/bikmoReviewsBlock";
+@import "blocks/bikmo3ColumnsBlock";
+@import "blocks/bikmoBgImageBlock";
+@import "blocks/bikmoMagazineBlock";
+@import "blocks/bikmoFaqBlock";
+@import "blocks/bikmo2ColumnsBlock";
+@import "blocks/bikmoPoliciesBock";
+@import "blocks/bikmoTableblock";
+@import "blocks/bikmoIconsgridBlock";
+@import "blocks/bikmoCategorizedBlock";
+@import "blocks/bikmoBrandsBlock";
+@import "blocks/bikmoTeamBlock";
+@import "blocks/bikmoJobsBlock";
+@import "blocks/bikmoTestimonialsBlock";
+@import "blocks/bikmoColumns123Block";
+@import "blocks/bikmo3ColumnsExtraBlock";
+@import "blocks/bikmo3ColumnsAltBlock";
+
+.wp-admin {
+  .btn {
+    font-size: 12px;
+    line-height: 100%;
+    padding: 16px;
+  }
+
+  .block_tag {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    display: inline-block;
+    position: relative;
+    color: $bikmo-dark;
+    margin-bottom: 20px;
+    z-index: 1;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $bikmo-green;
+      z-index: -1;
+      transform-origin: left;
+      transform: skew(3deg, -1deg);
+    }
+  }
+
+  .bikmocontentblock {
+    &.bikmocontentblock--image_left {
+      .bikmocontentblock_content__tag {
+        margin-left: 40px;
+      }
+
+      .bikmocontentblock_content__title {
+        margin-left: 40px;
+        font-size: 20px;
+        line-height: 22px;
+      }
+
+      .bikmocontentblock_content__text {
+        margin-left: 40px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .bikmocontentblock_content__buttons {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  .bikmobgimageblock {
+    min-width: 170%;
+    transform: translateX(-20%);
+
+    .bikmobgimageblock-card__title {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    .bikmobgimageblock-card__text {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .bikmoreviewsblock {
+    min-width: 170%;
+    transform: translateX(-20%);
+
+    .bikmoreviewsblock__slider-list {
+      display: flex;
+      overflow: scroll;
+      flex-wrap: nowrap;
+      align-items: stretch;
+      overflow-y: hidden;
+      width: auto;
+
+      .bikmoreviewsblock__item {
+        min-width: 330px;
+        max-width: 330px;
+        margin-right: 30px;
+        height: 350px;
+      }
+    }
+
+    .bikmoreviewsblock_arrows {
+      display: none;
+    }
+
+    .bikmoreviewsblock_layer {
+      left: -5%;
+      width: 110%;
+      clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
+    }
+  }
+
+  .bikmomagazineblock {
+    .featured-article {
+      .wrapper {
+        display: flex;
+      }
+
+      .featured-article__title {
+        font-size: 20px;
+        line-height: 22px;
+      }
+
+      .featured-article__description {
+        line-height: 20px;
+        font-size: 16px;
+      }
+    }
+
+    .article-btn {
+      display: flex;
+      font-size: 12px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+    }
+
+    .articles-list__container {
+      display: flex;
+      margin-top: 30px;
+    }
+
+    .article-item__image {
+      height: 120px !important;
+
+      a {
+        height: 100%;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .article-item__title {
+      text-decoration: none;
+      color: $bikmo-dark;
+      font-size: 20px;
+      line-height: 22px;
+
+      a {
+        font: inherit;
+        line-height: inherit;
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    .article-badge {
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 100%;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      padding: 5.84px 9.71px 5.84px 7.4px;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #3cf1c6;
+        z-index: -1;
+        transform-origin: left;
+        transform: skew(3deg, -1deg);
+      }
+    }
+
+    a {
+      pointer-events: none !important;
+    }
+  }
+
+  .bikmocategorizedblock {
+    .wrapper {
+      flex-direction: column;
+    }
+
+    .bikmocategorizedblock-body {
+      border-top: none;
+    }
+  }
+
+  .bikmocategorized3block {
+    .bikmocategorized3block_rows--mobile {
+      display: none;
+    }
+  }
+
+  .bikmobrandsblock {
+    .bikmobrandsblock-gallery {
+      flex-wrap: nowrap;
+
+      .bikmobrandsblock-gallery__item {
+        min-width: 120px;
+        max-width: 120px;
+        height: 60px;
+      }
+    }
+  }
+
+  .bikmoteamblock {
+    .bikmoteamcard {
+      min-width: 200px;
+      max-width: 200px;
+      margin-right: 20px;
+
+      &:nth-child(2n) {
+        margin-right: 20px;
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .bikmojobsblock {
+    width: 100vw;
+
+    .bikmojobsblock-body {
+      justify-content: center;
+    }
+
+    .bikmojobsblock-item .bikmojobsblock-item__title {
+      font-size: 23px;
+      line-height: 30px;
+    }
+  }
+
+  .bikmotestimonialsblock {
+    width: 60vw;
+    transform: translateX(-15%);
+
+    .bikmotestimonialsblock-body {
+      .bikmotestimonialsblock-slide {
+        display: none !important;
+
+        &:first-child {
+          padding-left: 40px;
+          padding-right: 40px;
+          display: inline-flex !important;
+        }
+      }
+    }
+
+  }
+
+  .bikmocolumns123block {
+    .bikmocolumns123block-body {
+      &.bikmocolumns123block-body--mobile {
+        display: none;
+      }
+    }
+
+    .bikmocolumns123block-item {
+      .bikmocolumns123block-item__bignumber {
+        font-size: 100px;
+        line-height: 100px;
+      }
+
+      .bikmocolumns123block-item__title {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .bikmo3columnextrablock {
+    width: 80vw;
+    transform: translateX(-30%);
+
+    .wrapper {
+      padding: 0;
+    }
+
+    .bikmo3columnextrablock-body {
+      &.bikmo3columnextrablock-body--mobile {
+        display: none;
+      }
+    }
+
+    .bikmo3columnextrablock-item {
+      .bikmo3columnextrablock-item__bignumber {
+        font-size: 100px;
+        line-height: 100px;
+      }
+
+      .bikmo3columnextrablock-item__title {
+        font-size: 20px;
+      }
+
+      .bikmo3columnextrablock-item__label {
+        font-size: 30px;
+      }
+
+      .bikmo3columnextrablock-item__text {
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-large) {
+  .wp-admin {
+    .bikmocolumns123block {
+      .bikmocolumns123block-body {
+        transform: translateX(-36%);
+      }
+    }
+
+    .bikmo3columnextrablock {
+      width: 80vw;
+      transform: translateX(-30%);
+
+      .bikmo3columnextrablock-item {
+        .bikmo3columnextrablock-item__bignumber {
+          font-size: 60px;
+          line-height: 60px;
+        }
+
+        .bikmo3columnextrablock-item__label {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-extra) {
+  .wp-admin {
+    .bikmotestimonialsblock {
+      width: 77vw;
+      transform: translateX(-28%);
+    }
+
+    .bikmocolumns123block {
+      .bikmocolumns123block-body {
+        transform: translateX(-62%);
+      }
+    }
+
+    .bikmo3columnextrablock {
+      width: 80vw;
+      transform: translateX(-30%);
+    }
+  }
+
+}

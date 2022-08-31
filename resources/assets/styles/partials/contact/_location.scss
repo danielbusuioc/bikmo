@@ -1,0 +1,132 @@
+.location_section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  .location_section__map {
+    height: 300px;
+
+    #map {
+      height: 100%;
+    }
+  }
+
+  .location_section__info {
+    width: 100%;
+    padding-left: vwsm(24px);
+    padding-right: vwsm(24px);
+    box-sizing: border-box;
+
+    .section_title {
+      display: none;
+    }
+
+    .location_section_item {
+      margin-top: 32px;
+
+      .location_section_item__label {
+        margin-bottom: 16px;
+        color: $bikmo-dark;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 100%;
+      }
+
+      .location_section_item__text {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 120%;
+        color: $bikmo-grey;
+
+        a {
+          text-decoration: none;
+          color: $magenta;
+          font: inherit;
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .location_section__header {
+    width: 100%;
+    padding-left: vwsm(24px);
+    padding-right: vwsm(24px);
+    box-sizing: border-box;
+    margin-bottom: 40px;
+
+    .section_title {
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-large) {
+  .location_section {
+    margin-top: 160px;
+    margin-bottom: 160px;
+
+    .wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: vwlg(156px);
+      padding-right: vwlg(156px);
+    }
+
+    .location_section__map {
+      height: 400px;
+      min-width: 67%;
+      max-width: 67%;
+    }
+
+    .location_section__info {
+      min-width: 30%;
+      max-width: 30%;
+      padding: 0;
+
+      .section_title {
+        display: block;
+        margin-bottom: 0;
+        text-align: left;
+      }
+    }
+
+    .location_section__header {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-extra) {
+  .location_section {
+    .wrapper {
+      padding-left: 200px;
+      padding-right: 200px;
+    }
+
+    .location_section__map {
+      height: 600px;
+      min-width: 1000px;
+      max-width: 1000px;
+    }
+
+    .location_section__info {
+      min-width: 390px;
+      max-width: 390px;
+
+      .location_section_item {
+        .location_section_item__text {
+          font-size: 24px;
+        }
+
+        .location_section_item__label {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,224 @@
+.bikmocontentblock {
+  margin-top: 72px;
+  margin-bottom: 48px;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .bikmocontentblock__half {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  &.bikmocontentblock--image_right {
+    .wrapper {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &.bikmocontentblock--image_left {
+    .wrapper {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.bikmocontentblock_image {
+  position: relative;
+  margin-bottom: 65px;
+  height: 271px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(2% 0, 100% 0%, 100% 98%, 0% 100%);
+  }
+
+  .bikmocontentblock_image__green-bar {
+    position: absolute;
+    top: -24px;
+    left: 0;
+    width: 6px;
+    height: calc(100% + 48px);
+    background-color: $bikmo-green;
+    z-index: 1;
+    transform: skew(-2deg);
+  }
+}
+
+.bikmocontentblock_content {
+  .bikmocontentblock_content__title {
+    max-width: vwsm(275px);
+  }
+
+  .bikmocontentblock_content__text {
+    a {
+      color: $magenta;
+      font: inherit;
+      text-decoration: none;
+    }
+  }
+
+  .bikmocontentblock_content__buttons {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-medium) {
+  .bikmocontentblock_content {
+    .bikmocontentblock_content__title {
+      max-width: vwmd(576px);
+    }
+
+    .bikmocontentblock_content__text {
+      max-width: vwmd(583px);
+    }
+
+    .bikmocontentblock_content__buttons {
+      margin-top: 32px;
+    }
+  }
+
+  .bikmocontentblock_image {
+    margin-bottom: 52px;
+    height: 472px;
+
+    .bikmocontentblock_image__green-bar {
+      left: 4px;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-large) {
+  .bikmocontentblock {
+    margin-top: 139px;
+    margin-bottom: 139px;
+
+    .wrapper {
+      flex-direction: row;
+    }
+
+    .bikmocontentblock__half {
+      min-width: 50%;
+      max-width: 50%;
+    }
+
+    &.bikmocontentblock--image_right {
+      .wrapper {
+        flex-direction: row;
+      }
+    }
+
+    &.bikmocontentblock--image_left {
+      .wrapper {
+        flex-direction: row-reverse;
+      }
+
+      .bikmocontentblock_content {
+        .bikmocontentblock_content__title {
+          margin-left: vwlg(145px);
+        }
+
+        .bikmocontentblock_content__text {
+          margin-left: vwlg(145px);
+        }
+
+        .bikmocontentblock_content__tag {
+          margin-left: vwlg(145px);
+        }
+
+        .bikmocontentblock_content__buttons {
+          margin-left: vwlg(145px);
+        }
+      }
+
+      .bikmocontentblock_image {
+        .bikmocontentblock_image__green-bar {
+          left: initial;
+          right: 2px;
+          transform: skew(1deg);
+        }
+
+        img {
+          clip-path: polygon(0 0, 98% 0, 100% 100%, 0 98%);
+        }
+      }
+    }
+  }
+
+  .bikmocontentblock_content {
+    .bikmocontentblock_content__title {
+      max-width: vwlg(467px);
+    }
+
+    .bikmocontentblock_content__text {
+      max-width: vwlg(383px);
+    }
+  }
+
+  .bikmocontentblock_image {
+    height: 472px;
+    margin-bottom: 0;
+
+    .bikmocontentblock_image__green-bar {
+      left: 2px;
+      width: 8px;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-extra) {
+
+  .bikmocontentblock {
+    &.bikmocontentblock--image_left {
+      .bikmocontentblock_content {
+        .bikmocontentblock_content__title {
+          margin-left: 145px;
+        }
+
+        .bikmocontentblock_content__text {
+          margin-left: 145px;
+        }
+
+        .bikmocontentblock_content__tag {
+          margin-left: 145px;
+        }
+
+        .bikmocontentblock_content__buttons {
+          margin-left: 145px;
+        }
+      }
+    }
+  }
+
+  .bikmocontentblock_content {
+    .bikmocontentblock_content__title {
+      max-width: 467px;
+    }
+
+    .bikmocontentblock_content__text {
+      max-width: 480px;
+    }
+  }
+
+  .bikmocontentblock_image {
+    height: 765px;
+
+    .bikmocontentblock_image__green-bar {
+      transform: skew(-2deg);
+      left: 8px;
+      width: 10px;
+    }
+
+    img {
+      clip-path: polygon(3% 0, 100% 0%, 100% 98%, 0% 100%);
+    }
+  }
+}

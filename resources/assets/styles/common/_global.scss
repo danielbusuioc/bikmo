@@ -1,0 +1,148 @@
+body.admin-bar {
+  margin-top: -46px;
+}
+
+.wrapper {
+  width: 100%;
+  padding-left: vwsm(24px);
+  padding-right: vwsm(24px);
+  box-sizing: border-box;
+}
+
+#wpadminbar {
+  display: none;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.spacer {
+  display: block;
+  margin: 0;
+  height: 1px;
+
+  &.spacer--mb-160 {
+    margin-bottom: 80px;
+  }
+}
+
+.slick-slider {
+  .slick-list {
+    overflow: hidden;
+  }
+
+  .slick-track {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.slick-dots {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 24px;
+
+  li {
+    border: none;
+    outline: none;
+    background: none;
+    margin: 0 8px;
+    display: block;
+    min-width: 9.18px;
+    max-width: 9.18px;
+    height: 9.18px;
+    overflow: hidden;
+    border-radius: 65.5738px;
+    cursor: pointer;
+
+    button {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: $white;
+      outline: 0;
+      text-indent: -9999px;
+      cursor: pointer;
+    }
+
+    &.slick-active {
+      button {
+        background-color: $bikmo-dark;
+      }
+    }
+  }
+}
+
+.green_underline {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  height: 100%;
+
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: 10px;
+    z-index: -1;
+    background-color: $bikmo-green;
+  }
+}
+
+.ios-fix {
+  .green_underline {
+    &:after {
+      bottom: 6px;
+    }
+  }
+}
+
+.green_text {
+  color: $bikmo-green !important;
+}
+
+@media only screen and (min-width: $breakpoint-medium) {
+  .wrapper {
+    padding-left: vwmd(36px);
+    padding-right: vwmd(36px);
+  }
+}
+
+@media only screen and (min-width: $breakpoint-large) {
+  body.admin-bar {
+    margin-top: -32px;
+  }
+  
+  .wrapper {
+    padding-left: vwlg(156px);
+    padding-right: vwlg(156px);
+  }
+
+  .spacer {
+    &.spacer--mb-160 {
+      margin-bottom: 160px;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-extra) {
+  .wrapper {
+    max-width: $breakpoint-extra;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin: 0 auto;
+  }
+}

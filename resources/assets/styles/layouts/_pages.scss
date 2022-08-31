@@ -1,0 +1,321 @@
+.page-template-default.page {
+  .main> {
+    .wp-block-image {
+      display: block;
+      margin: 64px auto 64px;
+
+      &.size-large {
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        margin: 0;
+        height: auto;
+      }
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 40px;
+      font-size: 16px;
+      line-height: 120%;
+      padding-left: 6.4vw;
+      padding-right: 6.4vw;
+
+      &:first-of-type {
+        margin-top: 100px;
+      }
+
+      a {
+        box-sizing: border-box;
+      }
+  
+      a:not(.wp-block-button__link) {
+        color: $magenta;
+        text-decoration: none;
+        font: inherit;
+      }
+    }
+
+    .wp-block-buttons {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "DIN", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 120%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      padding-left: 6.4vw;
+      padding-right: 6.4vw;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      margin-top: 0;
+      margin-bottom: 80px;
+      padding-left: 6.4vw;
+      padding-right: 6.4vw;
+      list-style: none;
+
+      li {
+        margin-bottom: 16px;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+      }
+
+      li::before {
+        content: "\2022";
+        color: $bikmo-green;
+        font-weight: bold;
+        display: inline-block;
+        width: 12px;
+        margin-left: 0;
+        padding-right: 10px;
+      }
+    }
+
+    #feefo-service-review-widgetId {
+      padding-left: 6.4vw;
+      padding-right: 6.4vw;
+      box-sizing: border-box;
+    }
+
+    
+    .wp-block-columns {
+      padding-left: vwsm(30px);
+      padding-right: vwsm(30px);
+
+      .wp-block-column {
+        .wp-block-image {
+          img {
+            display: block;
+            margin: 0 auto;
+            height: auto;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-medium) {
+  .page-template-default.page {
+    .main> {
+      .wp-block-image {
+        margin: 100px auto 80px;
+        height: auto;
+
+        img {
+          display: block;
+          width: 100%;
+          margin: 0;
+          height: auto;
+          object-fit: initial;
+        }
+
+        &.size-25 {
+          img {
+            width: 25%;
+            margin: 0 auto;
+          }
+
+          figcaption {
+            width: 25%;
+            margin: 0 auto;
+          }
+        }
+
+        &.size-33 {
+          img {
+            width: 33%;
+            margin: 0 auto;
+          }
+
+          figcaption {
+            width: 33%;
+            margin: 0 auto;
+          }
+        }
+
+        &.size-50 {
+          img {
+            width: 50%;
+            margin: 0 auto;
+          }
+
+          figcaption {
+            width: 50%;
+            margin: 0 auto;
+          }
+        }
+
+        &.size-75 {
+          img {
+            width: 75%;
+            margin: 0 auto;
+          }
+
+          figcaption {
+            width: 75%;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      p {
+        padding-left: vwmd(100px);
+        padding-right: vwmd(100px);
+        font-size: 24px;
+        line-height: 36px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        padding-left: vwmd(100px);
+        padding-right: vwmd(100px);
+        margin-bottom: 40px;
+      }
+
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      ul {
+        padding-left: vwmd(100px);
+        padding-right: vwmd(100px);
+
+        li {
+          font-size: 24px;
+          line-height: 120%;
+        }
+      }
+
+      .wp-block-buttons {
+        padding-left: vwmd(100px);
+        padding-right: vwmd(100px);
+      }
+
+      #feefo-service-review-widgetId {
+        padding-left: vwmd(100px);
+        padding-right: vwmd(100px);
+      }
+
+      .wp-block-columns {
+        padding-left: vwmd(96px);
+        padding-right: vwmd(96px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-large) {
+  .page-template-default.page {
+    .main>*:not(section) {
+      p {
+        padding-left: vwlg(150px);
+        padding-right: vwlg(150px);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        padding-left: vwlg(150px);
+        padding-right: vwlg(150px);
+      }
+
+      ul {
+        padding-left: vwlg(150px);
+        padding-right: vwlg(150px);
+      }
+
+      .wp-block-buttons {
+        padding-left: vwlg(150px);
+        padding-right: vwlg(150px);
+      }
+
+      #feefo-service-review-widgetId {
+        padding-left: vwlg(150px);
+        padding-right: vwlg(150px);
+      }
+
+      .wp-block-columns {
+        padding-left: vwlg(156px);
+        padding-right: vwlg(156px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-extra) {
+  .page-template-default.page {
+    .main> {
+      p {
+        padding-left: 260px;
+        padding-right: 260px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        padding-left: 260px;
+        padding-right: 260px;
+      }
+
+      ul {
+        padding-left: 260px;
+        padding-right: 260px;
+      }
+
+      .wp-block-buttons {
+        padding-left: 260px;
+        padding-right: 260px;
+      }
+
+      
+      #feefo-service-review-widgetId {
+        padding-left: 260px;
+        padding-right: 260px;
+      }
+
+      .wp-block-columns {
+        max-width: $breakpoint-extra;
+        padding-left: 200px;
+        padding-right: 200px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

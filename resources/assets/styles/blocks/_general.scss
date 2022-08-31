@@ -1,0 +1,376 @@
+.block_cta_list {
+  display: flex;
+  justify-content: space-between;
+
+  .btn {
+    padding: 16px 20px;
+    min-width: 48%;
+    max-width: 48%;
+  }
+}
+
+.block_title {
+  margin-top: 0;
+  margin-bottom: 24px;
+
+  br {
+    display: none;
+  }
+}
+
+.block_header {
+  text-align: center;
+
+  .block_header__title {
+    margin-bottom: 26px;
+  }
+
+  .block_header__subtitle {
+    margin-top: 0;
+    margin-bottom: 48px;
+  }
+}
+
+.section_title {
+  margin: 0;
+  text-align: center;
+}
+
+.block_tag {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  display: inline-block;
+  position: relative;
+  color: $bikmo-dark;
+  margin-bottom: 20px;
+  z-index: 1;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bikmo-green;
+    z-index: -1;
+    transform-origin: left;
+    transform: skew(3deg, -1deg);
+  }
+}
+
+.bikmogridcard {
+  padding: 0;
+
+  .bikmogridcard__uptitle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $bikmo-grey;
+    margin-bottom: 11px;
+  }
+
+  .bikmogridcard__icon {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .bikmogridcard__title {
+    margin: 0 0 12px 0;
+    font-family: "DIN", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 100%;
+    color: $bikmo-dark;
+  }
+
+  .bikmogridcard__title_2 {
+    margin: 0 0 15px 0;
+    font-family: "Tungsten Condensed", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 82.5%;
+    text-transform: uppercase;
+    color: $bikmo-dark;
+  }
+
+  .bikmogridcard__text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: $bikmo-grey;
+  }
+
+  .bikmogridcard__text_2 {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    color: $bikmo-grey;
+  }
+
+  .bikmogridcard__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $bikmo-dark;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: $bikmo-dark;
+    }
+
+    .green_underline {
+      &:after {
+        height: 6px;
+        bottom: 0;
+      }
+    }
+
+    svg {
+      margin-left: 12px;
+      height: 16px;
+    }
+  }
+
+  &.bikmogridcard--fullwidth {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .bikmogridcard--fullwidth__right {
+      .bikmogridcard__icon {
+        width: auto;
+        margin-top: 26px;
+        margin-bottom: 65px;
+
+        img {
+          width: auto;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .bikmogridcard--fullwidth__left {
+      .bikmocategorizedblock-item__title {
+        margin-bottom: 26px;
+      }
+    }
+  }
+
+  &.bikmogridcard--bordered {
+    border: 1px solid rgba($bikmo-grey, 0.2);
+    padding: 30px 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    .bikmogridcard__link {
+      margin-top: auto;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-medium) {
+
+  .block_title {
+    margin-bottom: 32px;
+
+    br {
+      display: inline;
+    }
+  }
+
+  .block_header {
+    .block_header__subtitle {
+      max-width: vwmd(508px);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 62px;
+    }
+  }
+
+
+  .block_cta_list {
+    justify-content: flex-start;
+
+    .btn {
+      min-width: initial;
+      max-width: initial;
+
+      &:nth-child(2) {
+        margin-left: 24px;
+      }
+    }
+  }
+
+  .block_tag {
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .bikmogridcard {
+    .bikmogridcard__uptitle {
+      font-size: 16px;
+      margin-bottom: 17px;
+    }
+
+    .bikmogridcard__icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 32px;
+    }
+
+    .bikmogridcard__title {
+      margin: 0 0 15px 0;
+      font-size: 21px;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+    }
+
+    .bikmogridcard__title_2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .bikmogridcard__text {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    &.bikmogridcard--fullwidth {
+      min-width: 100%;
+      max-width: 100%;
+      flex-direction: initial;
+      margin-right: 0 !important;
+      align-items: center;
+      justify-content: space-between;
+
+      .bikmogridcard--fullwidth__left {
+        min-width: vwmd(300px);
+        max-width: vwmd(300px);
+
+        .bikmocategorizedblock-item__title {
+          margin-bottom: 20px;
+        }
+      }
+
+      .bikmogridcard--fullwidth__right {
+        .bikmogridcard__icon {
+          margin: 0;
+          height: 90px;
+        }
+      }
+    }
+
+    &.bikmogridcard--bordered {
+      padding: 32px;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-large) {
+  .block_header {
+    .block_header__subtitle {
+      max-width: vwlg(725px);
+      margin-bottom: 82px;
+    }
+  }
+
+  .bikmogridcard {
+    .bikmogridcard__text_2 {
+      font-size: 21px;
+      line-height: 120%;
+    }
+
+    .bikmogridcard__link {
+      font-size: 21px;
+    }
+
+    &.bikmogridcard--fullwidth {
+      margin-bottom: 72px;
+
+      .bikmogridcard--fullwidth__left {
+        min-width: vwlg(379px);
+        max-width: vwlg(379px);
+      }
+    }
+
+    &.bikmogridcard--bordered {
+      padding: 40px 32px;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-extra) {
+  .block_tag {
+    margin-bottom: 28px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .block_header {
+    .block_header__subtitle {
+      max-width: 725px;
+      margin-bottom: 106px;
+    }
+  }
+
+  .bikmogridcard {
+    .bikmogridcard__title {
+      margin: 0 0 20px 0;
+      font-size: 24px;
+      line-height: 120%;
+    }
+
+    .bikmogridcard__text {
+      font-size: 18px;
+      line-height: 150%;
+    }
+
+    .bikmogridcard__text_2 {
+      font-size: 24px;
+    }
+
+    .bikmogridcard__link {
+      font-size: 24px;
+    }
+
+    &.bikmogridcard--fullwidth {
+      margin-bottom: 104px;
+
+      .bikmogridcard--fullwidth__left {
+        min-width: 570px;
+        max-width: 570px;
+      }
+
+      .bikmogridcard--fullwidth__right {
+        min-width: 300px;
+        max-width: 300px;
+      }
+    }
+
+    &.bikmogridcard--bordered {
+      padding: 45px 40px;
+    }
+  }
+}

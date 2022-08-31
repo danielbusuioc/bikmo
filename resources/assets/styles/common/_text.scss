@@ -1,0 +1,202 @@
+h1,
+.h1-text {
+  font-family: "Tungsten Condensed", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 90px;
+  line-height: 83%;
+}
+
+h2,
+.h2-text {
+  font-family: "Tungsten Condensed", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 83%;
+
+  .green_underline {
+    &:after {
+      // bottom: 8px;
+      bottom: 0;
+    }
+  }
+}
+
+.ios-fix {
+  h2,
+  .h2-text {
+    .green_underline {
+      &:after {
+        bottom: 6px;
+      }
+    }
+  }
+}
+
+h3,
+.h3-text {
+  font-family: "Tungsten Condensed", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 83%;
+}
+
+h4,
+.h4-text {
+  font-family: "Tungsten Condensed", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 83%;
+}
+
+.body-text,
+body {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 120%;
+
+  &.body-text--weight-medium {
+    font-weight: 500;
+  }
+
+  &.body-text--weight-bold {
+    font-weight: bold;
+  }
+
+  &.body-text--size-large {
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+  }
+
+  &.body-text--size-small {
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
+
+.block-text-regular {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 120%;
+  color: $bikmo-grey;
+}
+
+.block-text-medium {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+}
+
+.block-text-bold {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+  color: $bikmo-dark;
+}
+
+.caption-text {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: $bikmo-grey;
+}
+
+.link-text,
+button,
+a {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+@media only screen and (min-width: $breakpoint-medium) {
+
+  h2,
+  .h2-text {
+    font-size: 72px;
+    line-height: 83%;
+
+    .green_underline {
+      &:after {
+        // bottom: 12px;
+        bottom: 0;
+      }
+    }
+  }
+
+  .ios-fix {
+    h2,
+    .h2-text {
+      .green_underline {
+        &:after {
+          bottom: 6px;
+        }
+      }
+    }
+  }
+
+  .block-text-regular {
+    font-size: 21px;
+    line-height: 120%;
+  }
+
+  .block-text-medium {
+    font-size: 21px;
+    line-height: 120%;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-extra) {
+
+  h2,
+  .h2-text {
+    font-size: 96px;
+    line-height: 83%;
+
+    .green_underline {
+      &:after {
+        // bottom: 18px;
+        bottom: 0;
+      }
+    }
+  }
+
+  .ios-fix {
+    h2,
+    .h2-text {
+      .green_underline {
+        &:after {
+          bottom: 6px;
+        }
+      }
+    }
+  }
+
+  .block-text-regular {
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .block-text-medium {
+    font-size: 24px;
+    line-height: 120%;
+  }
+}
